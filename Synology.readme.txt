@@ -1,0 +1,21 @@
+
+https://miketabor.com/install-crashplan-synology/
+
+** To point UI to Synology put this into:
+
+/Library/Application Support/CrashPlan/.ui_info
+
+The GUID can be found on Synology when you log it via SSH and issue:
+cat /var/lib/crashplan/.ui_info ; echo
+
+# On Synology with Docker
+docker exec Crashplan cat /var/lib/crashplan/.ui_info
+
+** To point UI to this MAC put this into:
+
+/Library/Application Support/CrashPlan/.ui_info
+
+example value is
+4243,a08c2113-0662-43f8-bded-c39a1715e89c,192.168.100.130
+
+The last IP is your Synology IP.
