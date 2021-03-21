@@ -7,9 +7,13 @@ https://miketabor.com/install-crashplan-synology/
 
 The GUID can be found on Synology when you log it via SSH and issue:
 cat /var/lib/crashplan/.ui_info ; echo
+via docker
+sudo docker exec Crashplan1 cat /var/lib/crashplan/.ui_info ; echo
+on host in config
+cat config/id/.ui_info 
 
 # On Synology with Docker
-docker exec Crashplan cat /var/lib/crashplan/.ui_info
+docker exec Crashplan1 cat /var/lib/crashplan/.ui_info
 
 ** To point UI to this MAC put this into:
 
